@@ -1,0 +1,12 @@
+select ADD_MONTHS(TO_DATE('12-jun-2022'),3) from dual;
+select months_between('1-jan-19', '1-may-19') "months between" from dual;   
+select last_day ('18-june-19') "lastday" from dual;
+select next_day('18-jun-19', 'tuesday') "nextday" from dual;
+select round(to_date('17-jun-19 12:35:00 PM', 'DD-MM-YY HH:MI:SS PM')) from dual;
+select round(to_date('17-jun-19 12:35:00 AM', 'DD-MM-YY HH:MI:SS AM')) from dual;
+select round(to_date('17-jun-19 12:35:00 PM', 'DD-MM-YY HH:MI:SS PM')) from dual;
+SELECT LEAST(TRUNC(TO_DATE('17-06-19 12:35 PM', 'DD-MM-YY HH:MI PM')), TRUNC(SYSDATE)) AS nearest_lowest_date FROM dual;
+SELECT LEAST(TRUNC(TO_DATE('17-06-19 12:35 AM', 'DD-MM-YY HH:MI AM')), TRUNC(SYSDATE)) AS nearest_lowest_date FROM dual;
+SELECT LEAST(TRUNC(TO_DATE('17-06-19 01:30 PM', 'DD-MM-YY HH:MI PM')), TRUNC(SYSDATE)) AS nearest_lowest_date FROM dual;
+select next_day(sysdate, 'sunday') "nextday" from dual;
+select name, add_months(joining, 360) "Retirement" from employee;
